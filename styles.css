@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat', sans-serif;
+    color: lightblue;
+    background-color: lightblue;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* Header Items */
+header {
+    padding: 15px 6% 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color:black;
+    box-shadow: 0 5px 35px lightblue;
+}
+
+header h1 {
+    color: darkblue;
+    background-color: lightblue;
+    padding: 5px 1% 5px 5%;
+    margin: 0;
+    font-size: 50;
+    line-height: 1;
+}
+
+header a:hover {
+    color:black;
+}
+
+/* Navigational Items */
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: lightblue;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all 0.1s ease-in;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: black;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.light {
+    color: lightblue;
+}
+/* Hero Content */
+.hero-banner {
+    background: darkblue;
+    background-size: cover;
+    background-position: center;
+    min-height: 30vh;
+    color: lightblue;
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    padding-left: 10vw;
+}
+
+
+.hero-banner div {
+    flex: 0 0 90%;
+}
+
+.hero-banner h2 {
+    background-color: lightblue;
+    color: black;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    display: inline;
+}
+
+/* Main Page Content */
+
+.page-wrapper {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.page-section > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid black;
+    font-size: 20px;
+    line-height: 1.1;
+    color:black;
+}
+
+.page-section > div {
+    flex: 0 0 75%;
+}
+
+.page-section p {
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Grid Portfolio Structure */
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(150px, 1fr);
+}
+
+.grid-item {
+    border: 5px solid darkblue;
+    grid-column: span 4;
+    background-color: lightblue;
+    color: black;
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.8rem;
+}
+
+
+.grid-item:hover {
+    background-color: black;
+}
+
+.grid-item div {
+    background-color: darkblue;
+    padding: 8px 10px;
+}
+
+.grid-item h3 {
+    font-size: 1.4rem;
+}
+
+
+/* Contact Section */
+.contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.contact address a {
+    color: darkblue;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-style: normal;
+    display: inline-block;
+}
+
+.contact address a:hover {
+    background-size: 100% 88%;
+    color: black;
+}
+
+/* Footer formatting */
+footer  {
+    font-size: 1.0em;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+
+
+@media screen and (max-width: 980px) {
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .page-section > h2,
+    .page-section > div {
+        flex: 0 0 100%;
+    }
+
+    .page-section > h2 {
+        border-right: none;
+        border-bottom: 4px solid lightblue;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+        font-size: 7vw;
+    }
+
+    .hero-banner {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding-left: 50px;
+    }
+}
+
+/* Max Width 768px*/
+@media screen and (max-width: 768px) {
+    .grid-item,
+    .grid-item:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .grid-container {
+        grid-auto-rows: minmax(200px, 1fr);
+    }
+
+    .contact address {
+        flex-direction: column;
+        align-items: center;
+    }
+}
